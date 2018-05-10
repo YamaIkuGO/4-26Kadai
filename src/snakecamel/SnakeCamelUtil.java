@@ -6,7 +6,9 @@ public class SnakeCamelUtil {
 		String[] words = snake_case.split("_");
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < words.length ; i++) {//
+			if(words[i].length()!=0){
 			sb.append(capitalize(words[i]));
+			}
 		}
 		return new String(sb);
 	}
